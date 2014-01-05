@@ -12,7 +12,7 @@
 // A class extension
 @interface BNREmployee ()
 {
-    NSMutableArray *_assets;
+    NSMutableSet *_assets;
 }
 
 @property (nonatomic) unsigned int officeAlarmCode;
@@ -37,9 +37,17 @@
     // is assets nil>
     if (!_assets) {
         // create the array
-        _assets = [[NSMutableArray alloc] init];
+        _assets = [[NSMutableSet alloc] init];
     }
     [_assets addObject:a];
+    a.holder = self;
+}
+
+- (void)removeAsset:(BNRAsset *)a
+{
+    if (_assets) {
+        [_assets removeObject:a];
+    }
 }
 
 - (unsigned int)valueOfAssets

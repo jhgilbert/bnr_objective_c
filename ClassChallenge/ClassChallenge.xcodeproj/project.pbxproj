@@ -12,6 +12,7 @@
 		A8827806187109B600CF6D27 /* ClassChallenge.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = A8827805187109B600CF6D27 /* ClassChallenge.1 */; };
 		A882780E18710A0800CF6D27 /* BNRStockHolding.m in Sources */ = {isa = PBXBuildFile; fileRef = A882780D18710A0800CF6D27 /* BNRStockHolding.m */; };
 		A882781118710EC600CF6D27 /* BNRForeignStockHolding.m in Sources */ = {isa = PBXBuildFile; fileRef = A882781018710EC600CF6D27 /* BNRForeignStockHolding.m */; };
+		A8D1D752187904D200459F3A /* BNRPortfolio.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D1D751187904D200459F3A /* BNRPortfolio.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		A882780D18710A0800CF6D27 /* BNRStockHolding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRStockHolding.m; sourceTree = "<group>"; };
 		A882780F18710EC600CF6D27 /* BNRForeignStockHolding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRForeignStockHolding.h; sourceTree = "<group>"; };
 		A882781018710EC600CF6D27 /* BNRForeignStockHolding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRForeignStockHolding.m; sourceTree = "<group>"; };
+		A8D1D750187904D200459F3A /* BNRPortfolio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRPortfolio.h; sourceTree = "<group>"; };
+		A8D1D751187904D200459F3A /* BNRPortfolio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRPortfolio.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,8 @@
 		A88277F2187109B600CF6D27 = {
 			isa = PBXGroup;
 			children = (
+				A8D1D750187904D200459F3A /* BNRPortfolio.h */,
+				A8D1D751187904D200459F3A /* BNRPortfolio.m */,
 				A882780F18710EC600CF6D27 /* BNRForeignStockHolding.h */,
 				A882781018710EC600CF6D27 /* BNRForeignStockHolding.m */,
 				A882780C18710A0800CF6D27 /* BNRStockHolding.h */,
@@ -152,6 +157,7 @@
 				A8827802187109B600CF6D27 /* main.m in Sources */,
 				A882780E18710A0800CF6D27 /* BNRStockHolding.m in Sources */,
 				A882781118710EC600CF6D27 /* BNRForeignStockHolding.m in Sources */,
+				A8D1D752187904D200459F3A /* BNRPortfolio.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +260,7 @@
 				A882780B187109B600CF6D27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

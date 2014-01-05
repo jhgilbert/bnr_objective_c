@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "BNRStockHolding.h"
 #import "BNRForeignStockHolding.h"
+#import "BNRPortfolio.h"
 
 int main(int argc, const char * argv[])
 {
@@ -68,6 +69,15 @@ int main(int argc, const char * argv[])
         for(BNRStockHolding *s in fancyStocks){
             NSLog(@"The stock's value is %f", [s valueInDollars]);
         }
+        
+        // For additional challenge appearing in Chapter 21
+        BNRPortfolio *portfolio = [[BNRPortfolio alloc] init];
+        [portfolio addStock:stock2];
+        [portfolio addStock:stock1];
+        NSLog(@"Total portfolio value is %f", [portfolio totalValue]);
+        stock1.symbol = @"ARU";
+        NSLog(@"%@", stock1.symbol);
+        
     }
     return 0;
 }
