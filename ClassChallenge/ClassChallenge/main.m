@@ -74,10 +74,28 @@ int main(int argc, const char * argv[])
         BNRPortfolio *portfolio = [[BNRPortfolio alloc] init];
         [portfolio addStock:stock2];
         [portfolio addStock:stock1];
+        [portfolio addStock:stock3];
+        [portfolio addStock:stock4];
+        [portfolio addStock:stock5];
         NSLog(@"Total portfolio value is %f", [portfolio totalValue]);
         stock1.symbol = @"ARU";
+        stock2.symbol = @"BLA";
+        stock3.symbol = @"ZEE";
+        stock4.symbol = @"CUP";
+        stock5.symbol = @"HII";
         NSLog(@"%@", stock1.symbol);
         
+        NSLog(@"All holdings: %@", portfolio.holdings);
+                
+        // Get three most valuable stocks
+        NSArray *mostValuableStocks = [portfolio topThree];
+        NSLog(@"Most valuable stocks:");
+        for (BNRStockHolding *s in mostValuableStocks) {
+            NSLog(@"%f", [s valueInDollars]);
+        }
+        
+        // Print an alphabetized list of a portfolio's symbols
+        NSLog(@"Alphabetized symbols of portfolio: %@", [portfolio holdingsSymbols]);
     }
     return 0;
 }

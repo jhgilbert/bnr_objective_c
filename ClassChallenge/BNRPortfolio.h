@@ -18,6 +18,8 @@
 
 - (NSArray *)holdings;
 - (void)addStock:(BNRStockHolding *)stock;
+- (NSArray *)topThree;
+- (NSArray *)holdingsSymbols;
 - (float)totalValue;
 
 @end

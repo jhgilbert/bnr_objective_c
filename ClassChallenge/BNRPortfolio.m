@@ -33,6 +33,32 @@
     [_holdings addObject:stock];
 }
 
+- (NSArray *)topThree
+{    
+    NSMutableArray *sortedHoldings = [_holdings mutableCopy];
+    NSSortDescriptor *valueSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"valueInDollars"
+                                                                          ascending: NO];
+    [sortedHoldings sortUsingDescriptors:@[valueSortDescriptor]];
+    if (sortedHoldings.count > 3) {
+        return [sortedHoldings subarrayWithRange:NSMakeRange(0, 3)];
+    } else {
+        return sortedHoldings;
+    }
+}
+
+- (NSArray *)holdingsSymbols
+{
+    NSMutableArray *holdingsSortedBySymbol = [_holdings mutableCopy];
+    NSSortDescriptor *symbolSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"symbol"
+                                                                           ascending: YES];
+    [holdingsSortedBySymbol sortUsingDescriptors:@[symbolSortDescriptor]];
+    NSMutableArray *symbols = [[NSMutableArray alloc] init];
+    for (BNRStockHolding *h in holdingsSortedBySymbol) {
+        [symbols addObject:h.symbol];
+    }
+    return [symbols copy];    
+}
+
 - (float)totalValue
 {
     if (!_holdings) {
