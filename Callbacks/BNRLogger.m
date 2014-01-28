@@ -63,10 +63,5 @@
     _incomingData = nil;
 }
 
-// Called by the notification center when the time zone has changed
-- (void)zoneChange:(NSNotification *)note
-{
-    NSLog(@"The system time zone has changed!");
-}
 
 @end
